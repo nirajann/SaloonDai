@@ -1,0 +1,71 @@
+{% extends 'customerdashboard/main.html' %}
+{% block content %}
+<div class="wrapper">
+    <div class="left">
+        <img src="https://i.imgur.com/cMy8V5j.png" 
+        alt="user" width="100">
+        <h4>{{request.session.username}} </h4>
+         <p>barber</p>
+    </div>
+    <div class="right">
+        <div class="info">
+            <h3>Information</h3>
+            <div class="info_data">
+                 <div class="data">
+                    <h4>Email</h4>
+                   
+                    <p>{{customers.email}}</p>
+            
+                 </div>
+                 <div class="data">
+                   <h4>Phone</h4>
+                    <p>phone</p>
+              </div>
+            </div>
+        </div>
+      
+      <div class="projects">
+            <h3>About User</h3>
+            <div class="projects_data">
+                 <div class="data">
+                    <h4>location</h4>
+                    <p>Dillibazar</p>
+                 </div>
+                 <div class="data">
+                   <h4>Rating</h4>
+                   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star"></span>
+                   <span class="fa fa-star"></span>
+              </div>
+            </div>
+            <div class="data">
+                <h4>Request</h4>
+                <button type="button" class="btn btn-primary">
+                    Completed Request <span class="badge badge-light">100</span>
+                    <span class="sr-only">unread messages</span>
+                  </button>
+                  <button type="button" class="btn btn-danger">
+                    cancelled <span class="badge badge-light">3</span>
+                    <span class="sr-only">unread messages</span>
+                  </button>
+             </div>
+        </div>
+        <div class="data">
+            <h4>location</h4>
+            <p>Dillibazar</p>
+         </div>
+      
+        <div class="social_media">
+            <ul>
+                <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" >Logout</a>
+          </ul>
+      </div>
+    </div>
+</div>
+
+
+{% endblock content %}

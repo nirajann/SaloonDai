@@ -1,0 +1,67 @@
+{% extends 'customerdashboard/main.html' %}
+{% block content %}
+    <div class="dropdownmenucustomer"> 
+   <h1 class="selectlocation"> Select your location</h1>
+   <!-- Example single danger button -->
+   <div class="btn-group">
+     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       Action
+     </button>
+     <div class="dropdown-menu">
+       <a class="dropdown-item" href="#">Action</a>
+       <a class="dropdown-item" href="#">Another action</a>
+       <a class="dropdown-item" href="#">Something else here</a>
+       <div class="dropdown-divider"></div>
+       <a class="dropdown-item" href="#">Separated link</a>
+     </div>
+   </div>
+     <div class="selecttime">
+     <h1 class="selectlocation"> Select Time</h1>
+     <div >
+       <input type="text"  placeholder="" aria-label="" aria-describedby="basic-addon1">
+     </div>
+     
+   </div>
+   <div class="nextbutton">
+     <button class="btn btn-outline-primary" type="button">Next</button>
+   </div> 
+
+{% endblock content %}
+
+{% block section %}
+
+     <h1>this is select product area</h1>
+     <div class="productcheckbox">
+       <div class="form-check">
+         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+         <label class="form-check-label" for="flexRadioDefault1">
+           product one
+         </label>
+       </div>
+       <div class="form-check">
+         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+         <label class="form-check-label" for="flexRadioDefault2">
+           product TWo
+         </label>
+       </div>
+       <div class="form-check">
+         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+         <label class="form-check-label" for="flexRadioDefault2">
+           product three
+         </label>
+       </div>
+       <div class="form-check">
+         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+         <label class="form-check-label" for="flexRadioDefault2">
+           product four
+         </label>
+       </div>
+       <div class="form-check">
+         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+         <label class="form-check-label" for="flexRadioDefault2">
+           product five
+         </label>
+       </div>
+     </div>
+
+{% endblock section %}

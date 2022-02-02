@@ -1,0 +1,47 @@
+{% extends 'home/main.html'%}
+{%load static%}
+{% block content%}
+<section class="home" id="home">    
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="" method="POST" class="sign-in-form">
+            {% csrf_token %}
+            <h2 class="title">Login</h2>
+            {% for message in messages  %}
+              <p class= "createdmesseges">{{message}}</p>
+            {% endfor %}
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" name="Username" placeholder="Username" required/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" name="Password" placeholder="Password" required/>
+            </div>
+            <button type="submit" class="btn solid">Login</button>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>create your account</h3>
+            <p>
+              click here  if your dont have account already and 
+            </p>
+            <button class="btn transparent" >
+              
+              <a href="/signup">sign up </a>
+            </button>
+          </div>
+          <img src="{% static 'images\log.png' %}" class="image" alt="" />
+        </div>
+      </div>
+      
+    </div>
+  </section>    
+{% endblock content%}
+{% block section%}
+ <h1>puckyou</h>
+{% endblock section%}

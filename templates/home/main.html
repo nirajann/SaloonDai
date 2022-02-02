@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaloonDai</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/homepagestyle.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+        
+    </div>
+    <nav class="navbar">
+        <div class="max-width">
+            
+            <div class="logo">
+                <img src="{% static 'images\logomain.png' %}" alt="SaloonDai kogo">
+                <a href="home">Saloon<span>Dai</span></a>
+            </div>
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn"><strong>Home</strong></a></li>
+                <li><a href="#services" class="menu-btn"><strong>Services</strong></a></li>
+                <li><a href="#contact" class="menu-btn"><strong> Contact</strong></a></li>
+            </ul>
+           
+        </div>
+    </nav>
+    
+
+
+    <!-- services section start -->
+    
+        {% block content %}
+        
+
+        {% endblock content %}
+
+
+   
+    <!-- contact section start -->
+    
+        {% block section %}
+
+
+        {% endblock section %}
+
+    <!-- footer section start -->
+    <footer>
+        <span>Created By <a href="#">Endless Embedd</a> | <span class="far fa-copyright"></span> 2020 All rights reserved.</span>
+    </footer>
+</body>
+</html>
