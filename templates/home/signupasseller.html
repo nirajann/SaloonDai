@@ -1,33 +1,12 @@
 {% extends 'home/main.html'%}
 {%load static%}
 {% block content%}
-<section class="home" id="home">    
-  <div class="container">
-    <div class="forms-container">
-      <div class="signin-signup">
-        <form action="" method="POST" class="sign-in-form">
-          {% csrf_token %}
-          <h2 class="title">Signup as seller</h2>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" name="username" placeholder="Username" required/>
-          </div>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" name="firstname" placeholder="Firstname" required/>
-          </div>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" name="lastname" placeholder="Lastname" required/>
-          </div>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" name="email" placeholder="Email" required/>
-          </div>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" name="phone" placeholder="Phone" required/>
-          </div>
+{% comment %} Designe signup dashboard with css and javascript {% endcomment %}
+<section>
+
+  
+</section>
+{% comment %} Adding some location that placed by user in signup form  {% endcomment %}
           <label for="cars">Choose location:</label>
           <select class ="input-field2" name="location"  aria-placeholder="choose location"required>
               <option value="bhaktapur">Bhaktapur</option>
@@ -55,7 +34,7 @@
         <div class="content">
           <h3>One of us ?</h3>
           <p>
-            if you already have acoount click here 
+            Already have account? click here
           </p>
           <button class="btn transparent" >
             
