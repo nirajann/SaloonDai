@@ -1,6 +1,8 @@
+{% comment %} extending the main {% endcomment %}
 {% extends 'home/main.html'%}
 {%load static%}
 {% block content%}
+{% comment %} home section design {% endcomment %}
 <section class="home" id="home">    
     <div class="container">
       <div class="forms-container">
@@ -19,7 +21,8 @@
               <i class="fas fa-lock"></i>
               <input type="password" name="Password" placeholder="Password" required/>
             </div>
-            <button type="submit" class="btn solid">Login</button>
+            <button type="submit" class="btn solid">Login</button>  
+            {% comment %} adding some design in css as well {% endcomment %}
         </div>
       </div>
 
@@ -34,6 +37,7 @@
               
               <a href="/signup">sign up </a>
             </button>
+            {% comment %} adding image for login page {% endcomment %}
           </div>
           <img src="{% static 'images\log.png' %}" class="image" alt="" />
         </div>
