@@ -2,51 +2,35 @@
 {%load static%}
 {% block content%}
 {% comment %} Designe signup dashboard with css and javascript {% endcomment %}
-<section>
-
-  
-</section>
-{% comment %} Adding some location that placed by user in signup form  {% endcomment %}
-          <label for="cars">Choose location:</label>
-          <select class ="input-field2" name="location"  aria-placeholder="choose location"required>
-              <option value="bhaktapur">Bhaktapur</option>
-              <option value="kathmandu">kathmandu</option>
-              <option value="maitidevi">Maitidevi</option>
-              <option value="dillibazar">Dillibazar</option>
-              <option value="Ganeshwor">Ganeshwor</option>
-              <option value="Kamalpokhari">Kamalpokhari</option>
-              <option value="Anamnagar">Anamnagar</option>
-              <option value="chabel">Chabel</option>
-              <option value="Gausala">Gausala</option>
-              <option value="setopool">setopool</option>
-              <option value="ratopool">ratopool</option>
-          </select>
+<section class="home" id="home">    
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form action="" method="POST" class="sign-in-form">
+          {% csrf_token %}
+          <h2 class="title">Signup as Bikreta<h2>
           <div class="input-field">
-            <i class="fas fa-lock"></i>
-            <input type="password" name="password" placeholder="Password" required/>
+            <i class="fas fa-user"></i>
+            <input type="text" name="username" placeholder="Username" required/>
           </div>
-          <button  type="submit" value="register" class="btn btn-success pl-5 pr-5">Register</button>
-      </div>
-    </div>
-
-    <div class="panels-container">
-      <div class="panel left-panel">
-        <div class="content">
-          <h3>One of us ?</h3>
-          <p>
-            Already have account? click here
-          </p>
-          <button class="btn transparent" >
-            
-            <a href="/login">Log in </a>
-          </button>
-        </div>
-        <img src="{% static 'images\log.png' %}" class="image" alt="" />
-      </div>
-    </div>
-    
-  </div>
-</section>    
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" name="firstname" placeholder="Firstname" required/>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" name="lastname" placeholder="Lastname" required/>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" name="email" placeholder="Email" required/>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" name="phone" placeholder="Phone" required/>
+          </div>
+{% comment %} Adding some location that placed by user in signup form  {% endcomment %}
+         
 
 
 {% endblock content%}   
