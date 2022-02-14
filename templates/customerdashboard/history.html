@@ -1,5 +1,36 @@
 {% extends 'customerdashboard/main.html' %}
 {% block content %}
+<div class="container pl-6">
+ 
+    <div class="ratingheading text-center text-danger toptable">
+        <h3 class="ratingheadingh3">History</h3>
+    </div>
 
+    <div class="toptable"> 
+        <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">username</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Date</th>
+                <th scope="col">status</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for history_data in customers %}
+              <tr>
+                <th scope="row">#</th>
+                <td>{{history_data.customer_name}}</td>
+                <td>{{history_data.price}}</td>
+                <td>{{history_data.id}}</td>
+                <td>completed</td>
+              </tr>
+            {%endfor%} 
+            </tbody>
+            
+          </table>
+<!-- Content here -->
+</div>
 
 {% endblock content %}

@@ -1,0 +1,43 @@
+{% extends 'customerdashboard/main.html'%}
+{%load static%}
+{% block content%} 
+<section class="locationselect"> 
+<section class="fifth">
+    <div class="container">
+        <form action="" method="POST" >
+        {% csrf_token %}
+        <h2>ORDERS</h2><br>
+        <div class="row pt-5 pl-5">
+            <div class="pr-5">
+            Order:  <input class="detailtext h5  text-danger h5 form-control" id="time" type="text" name="order" value="{{info_deatil.id}}" readonly="readonly">
+            </div><br>
+            <div class="pr-5">
+            Delivery Time: <input class="detailtext text-danger h5 form-control" id="time" type="text" name="Time" value="{{info_deatil.Time}}" readonly="readonly">
+            </div><br>
+            <div class="pr-5">
+            Delivery Location: <input class="detailtext text-danger h5 form-control" id="time" type="text" name="location" value="{{info_deatil.location}}" readonly="readonly">
+            </div class="pr-5"><br>
+            <div >
+            Customer Name: <input class="detailtext text-danger h5 form-control" id="time" type="text" name="customer_name" value="{{request.session.username}}" readonly="readonly"> 
+            </div>
+            <div class="pr-5">
+            Total price:<input class="detailtext text-danger h5 form-control" id="time" type="text" name="price" value="500" readonly="readonly">  
+            </div>
+            <div class="pr-5"><br>
+            <input class="usernameedits text-light h5" id="time" type="text" name="username" value="barber" readonly="readonly"> 
+            <br>
+            </div>
+            
+            <div class ="dataregister"><br>
+                    <button type="button" class="btn btn-danger">back</button>
+                <button  type="submit" value="register" class="btn btn-success pl-5 pr-5">next</button> 
+            </div>
+            </div>
+        </form>
+    </div>
+</section>
+</section>
+{% endblock content%}
+{% block section%}
+
+{% endblock section%}

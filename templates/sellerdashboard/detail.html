@@ -1,0 +1,18 @@
+{% extends 'sellerdashboard/main.html'%}
+{%load static%}
+{% block content%} 
+<section class="locationselect">  
+    <div class="container">
+        <form action="" method="POST" >
+            {% csrf_token %} 
+            <div class="form-group">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                </div>
+        </form>      
+<section>                  
+{% endblock content%}
+{% block section%}
+
+{% endblock section%}

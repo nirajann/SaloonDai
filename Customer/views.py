@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from Customer.forms import *
 from .models import*
+from Adetail.models import *
+from Home.models import *
 
 
 from Customer import models
@@ -18,10 +20,14 @@ def signupcustomer(request):
     if request.method =='POST':
             form = customer(request.POST)
             if form.is_valid():
-                form.save()
-                user = form.cleaned_data.get('username')
-                messages.success(request,"you can now login " + user)
-                print(form)
+                if signupascustomer.objects.filter(username=request.POST['username']).exists():
+                    messages.error(request,"username already exists")
+                    return render(request, 'Home/signup.html')
+                else:
+                    form.save()
+                    user = form.cleaned_data.get('username')
+                    messages.success(request,"you can now login " + user)
+                    print(form)
             return redirect('/login')     
                 
     return render(request, 'home/signupcustomer.html')
@@ -34,11 +40,15 @@ def signupseller(request):
     if request.method =='POST':
             form = Seller(request.POST)
             if form.is_valid():
-                form.save()
-                user = form.cleaned_data.get('username')
-                messages.success(request,"you can now login " + user)
-                print(form)
-            return redirect('/login')     
+                if signupascustomer.objects.filter(username=request.POST['username']).exists():
+                    messages.error(request,"username already exists")
+                    return render(request, 'Home/signup.html')
+                else:
+                    form.save()
+                    user = form.cleaned_data.get('username')
+                    messages.success(request,"you can now login " + user)
+                    print(form)
+                    return redirect('/login')     
                 
     return render(request, 'home/signupasseller.html')
 
@@ -66,25 +76,25 @@ def login(request):
         form= customer()
         print("invalid")
     return render(request,"home/loginsignup.html",{'form':form})      
+    
+def logoutuser(request):
+    logout(request)
+    return redirect('/login')
 
-
-def customerdashboard(request):
-    return render(request,"customerdashboard/dashboard.html")  
-
-def sellerdashboard(request):
-    return render(request,"sellerdashboard/main.html")     
 
 
 def profile(request):
-    customers = signupascustomer.objects.get(username=request.session['username'])
+    customers = signupascustomer.objects.get(id=request.session['id'])
     return render(request,"customerdashboard/profile.html",{'customers': customers})
 
 
 def booking(request):
-    return render(request,"customerdashboard/booking.html")
+    customers = history_data.objects.all()
+    return render(request,"customerdashboard/booking.html",{'customers': customers})
 
 def history(request):
-    return render(request,"customerdashboard/history.html")
+    customers = history_data.objects.all()
+    return render(request,"customerdashboard/history.html",{'customers': customers})
 
 
 def topratedbarber(request):
@@ -92,4 +102,23 @@ def topratedbarber(request):
 
 
 def favoritebarber(request):
-    return render(request,"customerdashboard/main.html")                    
+    products = Product.objects.all()
+    context = {'products':products}
+    return render(request,"customerdashboard/favoritebarber.html",context)                    
+
+
+def sprofile(request):
+    customers = signupasseller.objects.get(username=request.session['username'])
+    return render(request,"sellerdashboard/sprofile.html",{'customers': customers})
+
+
+def sbooking(request):
+    customers = history_data.objects.all()
+    return render(request,"sellerdashboard/sbooking.html",{'customers': customers})
+
+def shistory(request):
+    customers = history_data.objects.all()
+    return render(request,"sellerdashboard/shistory.html",{'customers': customers})
+
+def sdetail(request):    
+    return render(request, 'sellerdashboard/detail.html')

@@ -1,0 +1,60 @@
+{% extends 'sellerdashboard/main.html'%}
+{%load static%}
+{% block content%}  
+<section class="locationselect">     
+    <h1 class="usernameedits">Active request</h1>
+ 
+
+    <div class="toptable"> 
+        <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Username</th>
+                <th scope="col">Detail</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><input class="" id="time" type="text" name="location" value="{{history_data.customer_name}}" readonly="readonly"></td>
+                <td><button type="button" class="btn btn-success">ACCEPT</button></td>
+              </tr>
+            </tbody>
+            
+          </table>
+<!-- Content here -->
+</div>
+
+</section>
+{% endblock content%}
+
+{%block section%}
+<section class="selectproduct">
+<h1 class="usernameedits">Your Request</h1>
+ 
+
+<div class="toptable"> 
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">username</th>
+            <th scope="col">Status</th>
+            <th scope="col">Cancel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>gandu</td>
+            <td><button type="button" class="btn btn-primary">ACCEPTED</a></td>
+            <td><a href="detail"><button src="detail" type="button" class="btn btn-danger">CANCEL</button></a></td>
+          </tr>
+        </tbody>
+        
+      </table>
+<!-- Content here -->
+</div>
+</section> 
+{%endblock section%}

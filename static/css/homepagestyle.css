@@ -84,13 +84,14 @@ section .title h2 {
     padding: 10px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
-    background: rgb(8, 11, 14);
+    background: #2ac6ec;
     z-index: 0.5;
+    border-bottom: 5px solid rgb(8, 8, 8);
 }
 
 .navbar.sticky {
     padding: 15px 0;
-    background: rgb(145, 210, 248);
+    background: #2ac6ec;
 }
 
 .navbar .max-width {
@@ -135,7 +136,8 @@ section .title h2 {
 }
 
 .navbar .menu li a:hover {
-    color: rgb(145, 210, 248);
+    color: #2ac6ec;
+    ;
 }
 
 .navbar.sticky .menu li a:hover {
@@ -157,7 +159,7 @@ section .title h2 {
     position: fixed;
     height: 45px;
     width: 42px;
-    background: rgb(145, 210, 248);
+    background: #2ac6ec;
     right: 30px;
     bottom: 10px;
     text-align: center;
@@ -186,9 +188,8 @@ section .title h2 {
 
 /* home section styling */
 
-.home1 {
+.home {
     display: flex;
-    background: url("images/banner.jpg") no-repeat center;
     height: 100vh;
     color: #f1f1f1;
     min-height: 500px;
@@ -202,27 +203,43 @@ section .title h2 {
 }
 
 .home .home-content .text-1 {
-    font-size: 60px;
+    font-size: 80px;
+    padding-left: 250px;
     font: bold;
-    color: rgb(18, 174, 235);
+    color: rgb(239, 246, 248);
+    font-weight: 100;
+}
+
+.home .home-content .text-2 {
+    font-size: 60px;
+    padding-left: 500px;
+    font: bold;
+    color: #2ac6ec;
 }
 
 .home .home-content a {
     display: inline-block;
-    background: rgb(145, 210, 248);
+    background: #2ac6ec;
     color: #fff;
+    padding-left: 300px;
     font-size: 25px;
+    text-align: center;
     padding: 12px 36px;
     margin-top: 20px;
     font-weight: 400;
     border-radius: 6px;
-    border: 2px solid rgb(145, 210, 248);
+    border: 2px solid #f1f8fa;
     transition: all 0.3s ease;
 }
 
 .home .home-content a:hover {
-    color: rgb(145, 210, 248);
-    background: none;
+    color: #fbfdfd;
+    background: #0c90b1;
+}
+
+.createdmesseges {
+    justify-content: center;
+    color: red;
 }
 
 
@@ -230,11 +247,11 @@ section .title h2 {
 
 .services,
 .teams {
-    color: rgb(20, 19, 19);
+    color: #2ac6ec;
     background: rgb(253, 247, 247);
     border-style: solid;
     border-width: 10px;
-    border-color: rgb(2, 2, 2);
+    border-color: rgb(248, 246, 246);
 }
 
 .services .title::before,
@@ -244,46 +261,8 @@ section .title h2 {
 
 .services .title::after,
 .teams .title::after {
-    background: rgb(107, 214, 247);
+    background: #2ac6ec;
     content: "what i provide";
-}
-
-.services .serv-content .card {
-    width: calc(33% - 20px);
-    background: rgb(153, 204, 238);
-    text-align: center;
-    border-radius: 6px;
-    padding: 27px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.services .serv-content .card:hover {
-    background: rgb(145, 210, 248);
-}
-
-.services .serv-content .card .box {
-    transition: all 0.3s ease;
-}
-
-.services .serv-content .card:hover .box {
-    transform: scale(1.05);
-}
-
-.services .serv-content .card i {
-    font-size: 50px;
-    color: rgb(145, 210, 248);
-    transition: color 0.3s ease;
-}
-
-.services .serv-content .card:hover i {
-    color: #fff;
-}
-
-.services .serv-content .card .text {
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
 }
 
 
@@ -330,7 +309,7 @@ section .title h2 {
 
 .contact .contact-content .row i {
     font-size: 25px;
-    color: rgb(145, 210, 248);
+    color: #2ac6ec;
 }
 
 .contact .contact-content .info .head {
@@ -397,8 +376,8 @@ section .title h2 {
 .contact .right form .button button {
     width: 100%;
     height: 100%;
-    border: 2px solid rgb(145, 210, 248);
-    background: rgb(145, 210, 248);
+    border: 2px solid #2ac6ec;
+    background: #2ac6ec;
     color: #fff;
     outline: none;
     font-size: 20px;
@@ -409,7 +388,7 @@ section .title h2 {
 }
 
 .contact .right form .button button:hover {
-    color: rgb(145, 210, 248);
+    color: #2ac6ec;
     background: none;
 }
 
@@ -419,7 +398,7 @@ section .title h2 {
 footer {
     background: rgb(252, 249, 249);
     padding: 15px 23px;
-    color: rgb(10, 98, 214);
+    color: rgb(237, 240, 245);
     text-align: center;
 }
 
@@ -487,29 +466,27 @@ form.sign-in-form {
 
 .title {
     font-size: 2.2rem;
-    color: rgb(42, 186, 243);
+    color: #2ac6ec;
     text-decoration: none;
 }
 
 .input-field {
     max-width: 380px;
     width: 100%;
-    background-color: #f0f0f0;
+    background-color: #f3eded;
     margin: 10px 0;
     height: 55px;
     border-radius: 55px;
     display: grid;
     grid-template-columns: 15% 85%;
-    padding: 0 0.4rem;
     position: relative;
 }
 
 .input-field i {
     text-align: center;
     line-height: 55px;
-    color: #acacac;
+    color: #2ac6ec;
     transition: 0.5s;
-    font-size: 1.1rem;
 }
 
 .input-field input {
@@ -523,43 +500,14 @@ form.sign-in-form {
 }
 
 .input-field input::placeholder {
-    color: #aaa;
+    color: #2ac6ec;
+    justify-content: center;
     font-weight: 500;
-}
-
-.social-text {
-    padding: 0.7rem 0;
-    font-size: 1rem;
-}
-
-.social-media {
-    display: flex;
-    justify-content: center;
-}
-
-.social-icon {
-    height: 46px;
-    width: 46px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0.45rem;
-    color: #333;
-    border-radius: 50%;
-    border: 1px solid #333;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: 0.3s;
-}
-
-.social-icon:hover {
-    color: #68cdec;
-    border-color: #68cdec;
 }
 
 .btn {
     width: 150px;
-    background-color: #68cdec;
+    background-color: #2ac6ec;
     border: none;
     outline: none;
     height: 49px;
@@ -594,7 +542,7 @@ form.sign-in-form {
     top: -10%;
     right: 48%;
     transform: translateY(-50%);
-    background-image: linear-gradient(-45deg, #68cdec 0%, #04befe 100%);
+    background-color: #2ac6ec;
     transition: 1.8s ease-in-out;
     border-radius: 50%;
     z-index: 6;
@@ -670,11 +618,9 @@ form.sign-in-form {
     color: white;
     width: 150px;
     height: 42px;
-    border-style: solid;
-    border-color: #27c3f8;
     text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 8px;
+    padding-bottom: 10px;
 }
 
 .right-panel .image,
@@ -853,9 +799,9 @@ form.sign-in-form {
     font-weight: 20px;
     font-size: 15px;
     color: white;
-    background-color: #04befe;
+    background-color: #2ac6ec;
     border-style: solid;
-    border-color: #04befe;
+    border-color: #2ac6ec;
     padding: 2px;
     text-align: center;
 }
@@ -873,8 +819,8 @@ form.sign-in-form {
     position: relative;
     font-weight: 20px;
     font-size: 15px;
-    border-color: #04befe;
-    background-color: #04befe;
+    border-color: #2ac6ec;
+    background-color: #2ac6ec;
     color: var(--white);
     border: none;
 }
